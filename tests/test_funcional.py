@@ -3,8 +3,7 @@ from time import sleep
 import pytest
 import subprocess
 from selenium.webdriver.firefox.options import Options
-#from selenium.webdriver.common.by import By
-#import os
+from selenium.webdriver.common.by import By
 
 @pytest.fixture
 def driver():
@@ -26,7 +25,7 @@ def test_app_opens(driver):
     driver.get("http://localhost:8501")
     sleep(5)
 
-""" def test_check_title_is(driver):
+def test_check_title_is(driver):
     # Verificar se a página abre
     driver.get("http://localhost:8501")
     # Verifica se o titulo de página é
@@ -50,4 +49,4 @@ def test_check_streamlit_h1(driver):
 
     # Verificar se o texto do elemento <h1> é o esperado
     expected_text = "Insira o seu excel para validação"
-    assert h1_element.text == expected_text """
+    assert h1_element.text == expected_text
