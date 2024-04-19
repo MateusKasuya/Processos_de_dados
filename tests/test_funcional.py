@@ -48,5 +48,5 @@ def test_check_streamlit_h1(driver):
     h1_element = driver.find_element(By.TAG_NAME, "h1")
 
     # Verificar se o texto do elemento <h1> é o esperado
-    expected_text = "Insira o seu excel para validação"
+    expected_text = "Validador de schema excel"
     assert h1_element.text == expected_text
